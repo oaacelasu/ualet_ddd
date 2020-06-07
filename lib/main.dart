@@ -4,8 +4,8 @@ import 'package:injectable/injectable.dart';
 import 'injection.dart';
 import 'presentation/pages/app_widget.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await configureInjection(Environment.dev);
+  configureInjection(Environment.dev);
   runApp(AppWidget());
 }
