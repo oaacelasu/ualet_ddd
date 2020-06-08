@@ -29,16 +29,10 @@ class Router extends RouterBase {
 
   @override
   Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    final args = settings.arguments;
     switch (settings.name) {
       case Routes.splashPage:
-        if (hasInvalidArgs<SplashPageArguments>(args)) {
-          return misTypedArgsRoute<SplashPageArguments>(args);
-        }
-        final typedArgs = args as SplashPageArguments ?? SplashPageArguments();
         return MaterialPageRoute<dynamic>(
-          builder: (context) =>
-              SplashPage(key: typedArgs.key, title: typedArgs.title),
+          builder: (context) => SplashPage(),
           settings: settings,
         );
       case Routes.signInPage:
@@ -50,15 +44,4 @@ class Router extends RouterBase {
         return unknownRoutePage(settings.name);
     }
   }
-}
-
-// *************************************************************************
-// Arguments holder classes
-// **************************************************************************
-
-//SplashPage arguments holder class
-class SplashPageArguments {
-  final Key key;
-  final String title;
-  SplashPageArguments({this.key, this.title});
 }

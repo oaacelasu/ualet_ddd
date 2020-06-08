@@ -13,6 +13,9 @@ class AppDimens {
   static const double captionTextSize = 12.0;
   static const double menuTextSize = 10.0;
 
+  // TextFormFields
+  static const double textFieldBorderRadius = 12.0;
+
   // Layout
   static const double layoutMargin = 24.0;
   static const double layoutHSpacerS = 11.0;

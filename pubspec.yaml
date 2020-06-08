@@ -1,5 +1,6 @@
 name: ualet_ddd
-description: A new Flutter project for Aualet 2.0 implmenting Domain Dirven Disign Architecture.
+description: A new Flutter project for Aualet 2.0 implmenting Domain Dirven Disign
+  Architecture.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -32,12 +33,11 @@ dependencies:
 
 dev_dependencies:
   auto_route_generator: ^0.5.0
-  build_runner:
+  build_runner: null
   freezed: ^0.10.9
   injectable_generator: ^0.4.1
   json_serializable: ^3.3.0
   lint: ^1.2.0
-
 
 flutter:
   assets:
@@ -48,17 +48,17 @@ flutter:
 
   uses-material-design: true
   fonts:
-  - family:  OpenSans
-    fonts:
-      - asset: assets/fonts/OpenSans-Light.ttf
-        weight: 300
-      - asset: assets/fonts/OpenSans-Regular.ttf
-        weight: 400
-      - asset:  assets/fonts/OpenSans-SemiBold.ttf
-        weight: 600
-      - asset:  assets/fonts/OpenSans-Bold.ttf
-        weight: 700
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 700
 
 flutter_intl:
-enabled: true
-main_locale: es
+  enabled: true
+  main_locale: es
