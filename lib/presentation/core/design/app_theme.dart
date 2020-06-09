@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
@@ -8,17 +9,32 @@ class AppTheme {
   static final ThemeData primaryTheme = ThemeData.light().copyWith(
     backgroundColor: AppColors.backgroundColor,
     primaryColor: AppColors.primaryColor,
-    accentColor: Colors.blueAccent,
+    accentColor: AppColors.primaryColor,
+    cursorColor: AppColors.primaryColor,
+    cupertinoOverrideTheme: CupertinoThemeData(
+      primaryColor: AppColors.primaryColor,
+    ),
     appBarTheme: ThemeData.light().appBarTheme.copyWith(
           brightness: Brightness.dark,
           color: AppColors.primaryColor,
           iconTheme: ThemeData.dark().iconTheme,
         ),
+    buttonTheme: ButtonThemeData(
+        buttonColor: AppColors.primaryColor,
+        shape: StadiumBorder(),
+        padding: EdgeInsets.symmetric(
+            vertical: AppDimens.layoutSpacerS,
+            horizontal: AppDimens.layoutSpacerM),
+        colorScheme: ThemeData.light().buttonTheme.colorScheme.copyWith(
+            primary: AppColors.primaryColor, secondary: AppColors.primaryColor),
+        textTheme: ButtonTextTheme.primary),
+    buttonColor: AppColors.primaryColor,
     inputDecorationTheme: InputDecorationTheme(
         fillColor: AppColors.inputColor,
         filled: true,
         labelStyle: AppTextStyles.normal1,
         hintStyle: AppTextStyles.normal1.copyWith(color: AppColors.g25Color),
+        floatingLabelBehavior: FloatingLabelBehavior.never,
         contentPadding:
             const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
         focusedBorder: OutlineInputBorder(

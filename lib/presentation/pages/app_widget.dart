@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ualet_ddd/application/auth/auth_bloc.dart';
-import 'package:ualet_ddd/presentation/core/design/app_colors.dart';
-import 'package:ualet_ddd/presentation/core/design/app_dimens.dart';
-import 'package:ualet_ddd/presentation/core/design/app_text_styles.dart';
 import 'package:ualet_ddd/presentation/core/design/app_theme.dart';
 import 'package:ualet_ddd/presentation/routes/router.gr.dart';
 import 'package:ualet_ddd/injection.dart';
@@ -22,7 +19,7 @@ class AppWidget extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-          title: 'Workout Tracker',
+          title: 'Ualet',
           debugShowCheckedModeBanner: false,
           localizationsDelegates: [
             S.delegate,
