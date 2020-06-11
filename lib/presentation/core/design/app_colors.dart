@@ -5,6 +5,10 @@ class AppColors {
   static const Color primaryColor = Color(0xFF7C54ED);
   static const Color primarySoftColor = Color(0xFFD7C7FF);
 
+  // Splash Colors
+  static const Color backgroundSplashTopColor = Color(0xFF7B53ED);
+  static const Color backgroundSplashBottomColor = Color(0xFF5C3EE6);
+
   // System Colors
   static const Color infoColor = Color(0xFF5FAAEC);
   static const Color successColor = Color(0xFF41CF69);

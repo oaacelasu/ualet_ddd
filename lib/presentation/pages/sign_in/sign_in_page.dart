@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:ualet_ddd/presentation/core/design/app_colors.dart';
 import 'package:ualet_ddd/presentation/core/design/app_dimens.dart';
 import 'package:ualet_ddd/presentation/core/widgets/buttons/custom_button_bar.dart';
 import 'package:ualet_ddd/presentation/core/widgets/buttons/primary_button.dart';
 import 'package:ualet_ddd/presentation/core/widgets/buttons/secondary_button.dart';
+import 'package:ualet_ddd/presentation/core/widgets/custom_text_form_field/custom_text_form_field.dart';
 import 'package:ualet_ddd/presentation/core/widgets/dialogs/custom_dialog.dart';
 
 class SignInPage extends StatelessWidget {
@@ -19,7 +19,7 @@ class SignInPage extends StatelessWidget {
           children: <Widget>[
             Column(
               children: [
-                TextFormField(
+                CustomTextFormField(
                     controller: TextEditingController(),
                     decoration: InputDecoration(hintText: 'Hola')),
                 PrimaryButton(

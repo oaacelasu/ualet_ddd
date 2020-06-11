@@ -33,13 +33,13 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `V. {version}\nCopyright 2020 UALET\nTodos los derechos reservados`
-  String splashPageVersionLabel(Object version) {
+  /// `V. {version}\n{copyright}}\nTodos los derechos reservados`
+  String splashPageVersionLabel(Object version, Object copyright) {
     return Intl.message(
-      'V. $version\nCopyright 2020 UALET\nTodos los derechos reservados',
+      'V. $version\n$copyright}\nTodos los derechos reservados',
       name: 'splashPageVersionLabel',
       desc: '',
-      args: [version],
+      args: [version, copyright],
     );
   }
 }

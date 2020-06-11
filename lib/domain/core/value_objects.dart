@@ -81,3 +81,17 @@ class UniqueId extends ValueObject<String> {
 
   const UniqueId._(this.value);
 }
+
+class NumberId extends ValueObject<int> {
+  @override
+  final Either<ValueFailure<int>, int> value;
+
+  factory NumberId(int input) {
+    assert(input != null && input != 0);
+    return NumberId._(
+      right(input),
+    );
+  }
+
+  const NumberId._(this.value);
+}

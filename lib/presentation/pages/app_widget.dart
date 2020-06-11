@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ualet_ddd/application/auth/auth_bloc.dart';
+import 'package:ualet_ddd/application/splash/splash_bloc.dart';
 import 'package:ualet_ddd/presentation/core/design/app_theme.dart';
 import 'package:ualet_ddd/presentation/routes/router.gr.dart';
 import 'package:ualet_ddd/injection.dart';
@@ -15,7 +16,10 @@ class AppWidget extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (_) =>
-              getIt<AuthBloc>()..add(const AuthEvent.authCheckRequested()),
+              getIt<SplashBloc>()..add(const SplashEvent.getParametersApp()),
+        ),
+        BlocProvider(
+          create: (_) => getIt<AuthBloc>(),
         ),
       ],
       child: MaterialApp(
