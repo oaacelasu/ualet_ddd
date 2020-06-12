@@ -1,3 +1,11 @@
 {
-    "splashPageVersionLabel" : "V. {version}\n{copyright}}\nTodos los derechos reservados"
+    "splashPageVersionLabel" : "V. {version}\n{copyright}}\nTodos los derechos reservados", 
+    "signUpButton" : "Registrarme", 
+    "alreadyHaveAnAccountLabel" : "Ya tengo una cuenta ", 
+    "alreadyHaveAnAccountButton" : "Iniciar sesíon", 
+    "indexTutorialItemA": "{type, select, title {Ahora, ¡Olvídalo!} description {A partir de hoy, tus ahorros podrán darte verdaderos rendimientos.} other {Piensa en todo lo que sabes sobre el ahorro tradicional.}}", 
+    "indexTutorialItemB": "{type, select, title {ESTO ES UALET} description {Una aplicación que te permitirá sentarte a no hacer nada mientras nuestros expertos, con la supervisión de la Superintendencia Financiera de Colombia, trabajan para ti.} other {}}",
+    "indexTutorialItemC": "{type, select, title {¿CÓMO?} description {Con un robot que mueve tu dinero en los fondos de inversión más top del país, para que la rentabilidad sea una realidad.} other {}}",
+    "indexTutorialItemD": "{type, select, title {PERFIL DE RIESGO} description {Lo que es adecuado para otros, puede no serlo para ti. Averigüemos qué nivel de riesgo estás dispuesto a asumir para elegir los mejores fondos de inversión que moverán tus ahorros.} other {}}",
+    "indexTutorialItemE": "{type, select, title {¡Empieza ahora!} description {Activa la opción de ahorro automático y nos vemos en unos días para decirte que tú también haces parte de la comunidad de ahorradores más grande de Colombia.} other {}}"
 } 

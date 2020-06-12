@@ -42,6 +42,111 @@ class S {
       args: [version, copyright],
     );
   }
+
+  /// `Registrarme`
+  String get signUpButton {
+    return Intl.message(
+      'Registrarme',
+      name: 'signUpButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ya tengo una cuenta `
+  String get alreadyHaveAnAccountLabel {
+    return Intl.message(
+      'Ya tengo una cuenta ',
+      name: 'alreadyHaveAnAccountLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Iniciar sesíon`
+  String get alreadyHaveAnAccountButton {
+    return Intl.message(
+      'Iniciar sesíon',
+      name: 'alreadyHaveAnAccountButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{type, select, title {Ahora, ¡Olvídalo!} description {A partir de hoy, tus ahorros podrán darte verdaderos rendimientos.} other {Piensa en todo lo que sabes sobre el ahorro tradicional.}}`
+  String indexTutorialItemA(Object type) {
+    return Intl.select(
+      type,
+      {
+        'title': 'Ahora, ¡Olvídalo!',
+        'description': 'A partir de hoy, tus ahorros podrán darte verdaderos rendimientos.',
+        'other': 'Piensa en todo lo que sabes sobre el ahorro tradicional.',
+      },
+      name: 'indexTutorialItemA',
+      desc: '',
+      args: [type],
+    );
+  }
+
+  /// `{type, select, title {ESTO ES UALET} description {Una aplicación que te permitirá sentarte a no hacer nada mientras nuestros expertos, con la supervisión de la Superintendencia Financiera de Colombia, trabajan para ti.} other {}}`
+  String indexTutorialItemB(Object type) {
+    return Intl.select(
+      type,
+      {
+        'title': 'ESTO ES UALET',
+        'description': 'Una aplicación que te permitirá sentarte a no hacer nada mientras nuestros expertos, con la supervisión de la Superintendencia Financiera de Colombia, trabajan para ti.',
+        'other': '',
+      },
+      name: 'indexTutorialItemB',
+      desc: '',
+      args: [type],
+    );
+  }
+
+  /// `{type, select, title {¿CÓMO?} description {Con un robot que mueve tu dinero en los fondos de inversión más top del país, para que la rentabilidad sea una realidad.} other {}}`
+  String indexTutorialItemC(Object type) {
+    return Intl.select(
+      type,
+      {
+        'title': '¿CÓMO?',
+        'description': 'Con un robot que mueve tu dinero en los fondos de inversión más top del país, para que la rentabilidad sea una realidad.',
+        'other': '',
+      },
+      name: 'indexTutorialItemC',
+      desc: '',
+      args: [type],
+    );
+  }
+
+  /// `{type, select, title {PERFIL DE RIESGO} description {Lo que es adecuado para otros, puede no serlo para ti. Averigüemos qué nivel de riesgo estás dispuesto a asumir para elegir los mejores fondos de inversión que moverán tus ahorros.} other {}}`
+  String indexTutorialItemD(Object type) {
+    return Intl.select(
+      type,
+      {
+        'title': 'PERFIL DE RIESGO',
+        'description': 'Lo que es adecuado para otros, puede no serlo para ti. Averigüemos qué nivel de riesgo estás dispuesto a asumir para elegir los mejores fondos de inversión que moverán tus ahorros.',
+        'other': '',
+      },
+      name: 'indexTutorialItemD',
+      desc: '',
+      args: [type],
+    );
+  }
+
+  /// `{type, select, title {¡Empieza ahora!} description {Activa la opción de ahorro automático y nos vemos en unos días para decirte que tú también haces parte de la comunidad de ahorradores más grande de Colombia.} other {}}`
+  String indexTutorialItemE(Object type) {
+    return Intl.select(
+      type,
+      {
+        'title': '¡Empieza ahora!',
+        'description': 'Activa la opción de ahorro automático y nos vemos en unos días para decirte que tú también haces parte de la comunidad de ahorradores más grande de Colombia.',
+        'other': '',
+      },
+      name: 'indexTutorialItemE',
+      desc: '',
+      args: [type],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

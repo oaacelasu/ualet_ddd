@@ -21,6 +21,7 @@ dependencies:
   dio: ^3.0.9
   flushbar: ^1.10.4
   flutter_bloc: ^4.0.0
+  flutter_swiper: ^1.1.6
   freezed_annotation: ^0.7.1
   get_it: ^4.0.2
   injectable: ^0.4.0+1

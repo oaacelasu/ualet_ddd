@@ -17,7 +17,8 @@ class LocalAuthFacade implements IAuthFacade {
   @override
   Future<Option<User>> getSignedInUser() {
     final userPref = _sharedPreferences.getString("prefs_user");
-    return Future.value(optionOf(_localUserMapper.toDomain(userPref)));
+    return Future.delayed(Duration(seconds: 3),
+        () => optionOf(_localUserMapper.toDomain(userPref)));
   }
 
   @override

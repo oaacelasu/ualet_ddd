@@ -9,13 +9,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:ualet_ddd/presentation/pages/splash/splash_page.dart';
 import 'package:ualet_ddd/presentation/pages/sign_in/sign_in_page.dart';
+import 'package:ualet_ddd/presentation/pages/index/index_page.dart';
 
 abstract class Routes {
   static const splashPage = '/';
   static const signInPage = '/sign-in-page';
+  static const indexPage = '/index-page';
   static const all = {
     splashPage,
     signInPage,
+    indexPage,
   };
 }
 
@@ -38,6 +41,11 @@ class Router extends RouterBase {
       case Routes.signInPage:
         return MaterialPageRoute<dynamic>(
           builder: (context) => SignInPage(),
+          settings: settings,
+        );
+      case Routes.indexPage:
+        return MaterialPageRoute<dynamic>(
+          builder: (context) => IndexPage(),
           settings: settings,
         );
       default:
