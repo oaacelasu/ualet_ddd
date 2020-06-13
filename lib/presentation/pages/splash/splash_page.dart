@@ -7,6 +7,7 @@ import 'package:ualet_ddd/generated/l10n.dart';
 import 'package:ualet_ddd/injection.dart';
 import 'package:ualet_ddd/presentation/core/design/app_colors.dart';
 import 'package:ualet_ddd/presentation/core/design/app_text_styles.dart';
+import 'package:ualet_ddd/presentation/core/misc/toast_helper.dart';
 import 'package:ualet_ddd/presentation/core/widgets/loading_in_progress_overlay/loading_in_progress_overlay.dart';
 import 'package:ualet_ddd/presentation/routes/router.gr.dart';
 import 'package:flutter/material.dart';
@@ -38,10 +39,10 @@ class _PageWidget extends StatelessWidget {
     return BlocConsumer<SplashBloc, SplashState>(
       listener: (context, state) {
         state.maybeMap(
-            loadSuccess: (_) =>
-                context.bloc<AuthBloc>().add(AuthCheckRequested()),
+            loadSuccess: (_) => Future.delayed(Duration(seconds: 2),
+                () => context.bloc<AuthBloc>().add(AuthCheckRequested())),
             loadFailure: (state) {
-              return FlushbarHelper.createError(
+              return ToastHelper.createError(
                 message: state.splashFailure.map(
                     fromServer: (state) => state.message,
                     unableToFetch: (_) => 'Unable to fetch',

@@ -136,7 +136,6 @@ class CustomTextFormField extends FormField<String> {
                   toolbarOptions: toolbarOptions,
                   readOnly: readOnly,
                   showCursor: showCursor,
-                  obscuringCharacter: obscuringCharacter,
                   obscureText: obscureText,
                   autocorrect: autocorrect,
                   smartDashesType: smartDashesType ??

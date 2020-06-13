@@ -32,35 +32,27 @@ class _$ValueFailureTearOff {
     );
   }
 
-  NumberTooLarge<T> numberTooLarge<T>(
-      {@required T failedValue, @required num max}) {
-    return NumberTooLarge<T>(
-      failedValue: failedValue,
-      max: max,
-    );
-  }
-
-  ListTooLong<T> listTooLong<T>({@required T failedValue, @required int max}) {
-    return ListTooLong<T>(
-      failedValue: failedValue,
-      max: max,
-    );
-  }
-
   InvalidEmail<T> invalidEmail<T>({@required T failedValue}) {
     return InvalidEmail<T>(
       failedValue: failedValue,
     );
   }
 
-  ShortPassword<T> shortPassword<T>({@required T failedValue}) {
-    return ShortPassword<T>(
+  InvalidPassword<T> invalidPassword<T>({@required T failedValue}) {
+    return InvalidPassword<T>(
       failedValue: failedValue,
     );
   }
 
-  InvalidPhotoUrl<T> invalidPhotoUrl<T>({@required T failedValue}) {
-    return InvalidPhotoUrl<T>(
+  InvalidPhoneNumber<T> invalidPhoneNumber<T>({@required T failedValue}) {
+    return InvalidPhoneNumber<T>(
+      failedValue: failedValue,
+    );
+  }
+
+  PhoneNumberNotStartsWith3<T> phoneNumberNotStartsWith3<T>(
+      {@required T failedValue}) {
+    return PhoneNumberNotStartsWith3<T>(
       failedValue: failedValue,
     );
   }
@@ -77,22 +69,20 @@ mixin _$ValueFailure<T> {
     @required Result exceedingLength(T failedValue, int max),
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
+    @required Result invalidPassword(T failedValue),
+    @required Result invalidPhoneNumber(T failedValue),
+    @required Result phoneNumberNotStartsWith3(T failedValue),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
     Result empty(T failedValue),
     Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
+    Result invalidPassword(T failedValue),
+    Result invalidPhoneNumber(T failedValue),
+    Result phoneNumberNotStartsWith3(T failedValue),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -100,22 +90,21 @@ mixin _$ValueFailure<T> {
     @required Result exceedingLength(ExceedingLength<T> value),
     @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    @required Result invalidPassword(InvalidPassword<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required
+        Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
     Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    Result invalidPassword(InvalidPassword<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
     @required Result orElse(),
   });
 
@@ -233,20 +222,18 @@ class _$ExceedingLength<T>
     @required Result exceedingLength(T failedValue, int max),
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
+    @required Result invalidPassword(T failedValue),
+    @required Result invalidPhoneNumber(T failedValue),
+    @required Result phoneNumberNotStartsWith3(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
     return exceedingLength(failedValue, max);
   }
 
@@ -256,11 +243,10 @@ class _$ExceedingLength<T>
     Result exceedingLength(T failedValue, int max),
     Result empty(T failedValue),
     Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
+    Result invalidPassword(T failedValue),
+    Result invalidPhoneNumber(T failedValue),
+    Result phoneNumberNotStartsWith3(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -276,20 +262,19 @@ class _$ExceedingLength<T>
     @required Result exceedingLength(ExceedingLength<T> value),
     @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    @required Result invalidPassword(InvalidPassword<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required
+        Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
     return exceedingLength(this);
   }
 
@@ -299,11 +284,10 @@ class _$ExceedingLength<T>
     Result exceedingLength(ExceedingLength<T> value),
     Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    Result invalidPassword(InvalidPassword<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -394,20 +378,18 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     @required Result exceedingLength(T failedValue, int max),
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
+    @required Result invalidPassword(T failedValue),
+    @required Result invalidPhoneNumber(T failedValue),
+    @required Result phoneNumberNotStartsWith3(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
     return empty(failedValue);
   }
 
@@ -417,11 +399,10 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     Result exceedingLength(T failedValue, int max),
     Result empty(T failedValue),
     Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
+    Result invalidPassword(T failedValue),
+    Result invalidPhoneNumber(T failedValue),
+    Result phoneNumberNotStartsWith3(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -437,20 +418,19 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     @required Result exceedingLength(ExceedingLength<T> value),
     @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    @required Result invalidPassword(InvalidPassword<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required
+        Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
     return empty(this);
   }
 
@@ -460,11 +440,10 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     Result exceedingLength(ExceedingLength<T> value),
     Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    Result invalidPassword(InvalidPassword<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -556,20 +535,18 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     @required Result exceedingLength(T failedValue, int max),
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
+    @required Result invalidPassword(T failedValue),
+    @required Result invalidPhoneNumber(T failedValue),
+    @required Result phoneNumberNotStartsWith3(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
     return multiline(failedValue);
   }
 
@@ -579,11 +556,10 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     Result exceedingLength(T failedValue, int max),
     Result empty(T failedValue),
     Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
+    Result invalidPassword(T failedValue),
+    Result invalidPhoneNumber(T failedValue),
+    Result phoneNumberNotStartsWith3(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -599,20 +575,19 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     @required Result exceedingLength(ExceedingLength<T> value),
     @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    @required Result invalidPassword(InvalidPassword<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required
+        Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
     return multiline(this);
   }
 
@@ -622,11 +597,10 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     Result exceedingLength(ExceedingLength<T> value),
     Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    Result invalidPassword(InvalidPassword<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -644,358 +618,6 @@ abstract class Multiline<T> implements ValueFailure<T> {
   T get failedValue;
   @override
   $MultilineCopyWith<T, Multiline<T>> get copyWith;
-}
-
-abstract class $NumberTooLargeCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
-  factory $NumberTooLargeCopyWith(
-          NumberTooLarge<T> value, $Res Function(NumberTooLarge<T>) then) =
-      _$NumberTooLargeCopyWithImpl<T, $Res>;
-  @override
-  $Res call({T failedValue, num max});
-}
-
-class _$NumberTooLargeCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $NumberTooLargeCopyWith<T, $Res> {
-  _$NumberTooLargeCopyWithImpl(
-      NumberTooLarge<T> _value, $Res Function(NumberTooLarge<T>) _then)
-      : super(_value, (v) => _then(v as NumberTooLarge<T>));
-
-  @override
-  NumberTooLarge<T> get _value => super._value as NumberTooLarge<T>;
-
-  @override
-  $Res call({
-    Object failedValue = freezed,
-    Object max = freezed,
-  }) {
-    return _then(NumberTooLarge<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
-      max: max == freezed ? _value.max : max as num,
-    ));
-  }
-}
-
-class _$NumberTooLarge<T>
-    with DiagnosticableTreeMixin
-    implements NumberTooLarge<T> {
-  const _$NumberTooLarge({@required this.failedValue, @required this.max})
-      : assert(failedValue != null),
-        assert(max != null);
-
-  @override
-  final T failedValue;
-  @override
-  final num max;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ValueFailure<$T>.numberTooLarge(failedValue: $failedValue, max: $max)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.numberTooLarge'))
-      ..add(DiagnosticsProperty('failedValue', failedValue))
-      ..add(DiagnosticsProperty('max', max));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is NumberTooLarge<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.max, max) ||
-                const DeepCollectionEquality().equals(other.max, max)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(max);
-
-  @override
-  $NumberTooLargeCopyWith<T, NumberTooLarge<T>> get copyWith =>
-      _$NumberTooLargeCopyWithImpl<T, NumberTooLarge<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
-  }) {
-    assert(exceedingLength != null);
-    assert(empty != null);
-    assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
-    assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
-    return numberTooLarge(failedValue, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (numberTooLarge != null) {
-      return numberTooLarge(failedValue, max);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
-  }) {
-    assert(exceedingLength != null);
-    assert(empty != null);
-    assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
-    assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
-    return numberTooLarge(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (numberTooLarge != null) {
-      return numberTooLarge(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NumberTooLarge<T> implements ValueFailure<T> {
-  const factory NumberTooLarge({@required T failedValue, @required num max}) =
-      _$NumberTooLarge<T>;
-
-  @override
-  T get failedValue;
-  num get max;
-  @override
-  $NumberTooLargeCopyWith<T, NumberTooLarge<T>> get copyWith;
-}
-
-abstract class $ListTooLongCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
-  factory $ListTooLongCopyWith(
-          ListTooLong<T> value, $Res Function(ListTooLong<T>) then) =
-      _$ListTooLongCopyWithImpl<T, $Res>;
-  @override
-  $Res call({T failedValue, int max});
-}
-
-class _$ListTooLongCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ListTooLongCopyWith<T, $Res> {
-  _$ListTooLongCopyWithImpl(
-      ListTooLong<T> _value, $Res Function(ListTooLong<T>) _then)
-      : super(_value, (v) => _then(v as ListTooLong<T>));
-
-  @override
-  ListTooLong<T> get _value => super._value as ListTooLong<T>;
-
-  @override
-  $Res call({
-    Object failedValue = freezed,
-    Object max = freezed,
-  }) {
-    return _then(ListTooLong<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
-      max: max == freezed ? _value.max : max as int,
-    ));
-  }
-}
-
-class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
-  const _$ListTooLong({@required this.failedValue, @required this.max})
-      : assert(failedValue != null),
-        assert(max != null);
-
-  @override
-  final T failedValue;
-  @override
-  final int max;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ValueFailure<$T>.listTooLong(failedValue: $failedValue, max: $max)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.listTooLong'))
-      ..add(DiagnosticsProperty('failedValue', failedValue))
-      ..add(DiagnosticsProperty('max', max));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is ListTooLong<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.max, max) ||
-                const DeepCollectionEquality().equals(other.max, max)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(max);
-
-  @override
-  $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
-      _$ListTooLongCopyWithImpl<T, ListTooLong<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
-  }) {
-    assert(exceedingLength != null);
-    assert(empty != null);
-    assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
-    assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
-    return listTooLong(failedValue, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (listTooLong != null) {
-      return listTooLong(failedValue, max);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
-  }) {
-    assert(exceedingLength != null);
-    assert(empty != null);
-    assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
-    assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
-    return listTooLong(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (listTooLong != null) {
-      return listTooLong(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ListTooLong<T> implements ValueFailure<T> {
-  const factory ListTooLong({@required T failedValue, @required int max}) =
-      _$ListTooLong<T>;
-
-  @override
-  T get failedValue;
-  int get max;
-  @override
-  $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith;
 }
 
 abstract class $InvalidEmailCopyWith<T, $Res>
@@ -1073,20 +695,18 @@ class _$InvalidEmail<T>
     @required Result exceedingLength(T failedValue, int max),
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
+    @required Result invalidPassword(T failedValue),
+    @required Result invalidPhoneNumber(T failedValue),
+    @required Result phoneNumberNotStartsWith3(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
     return invalidEmail(failedValue);
   }
 
@@ -1096,11 +716,10 @@ class _$InvalidEmail<T>
     Result exceedingLength(T failedValue, int max),
     Result empty(T failedValue),
     Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
+    Result invalidPassword(T failedValue),
+    Result invalidPhoneNumber(T failedValue),
+    Result phoneNumberNotStartsWith3(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1116,20 +735,19 @@ class _$InvalidEmail<T>
     @required Result exceedingLength(ExceedingLength<T> value),
     @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    @required Result invalidPassword(InvalidPassword<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required
+        Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
     return invalidEmail(this);
   }
 
@@ -1139,11 +757,10 @@ class _$InvalidEmail<T>
     Result exceedingLength(ExceedingLength<T> value),
     Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    Result invalidPassword(InvalidPassword<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1163,40 +780,40 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith;
 }
 
-abstract class $ShortPasswordCopyWith<T, $Res>
+abstract class $InvalidPasswordCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $ShortPasswordCopyWith(
-          ShortPassword<T> value, $Res Function(ShortPassword<T>) then) =
-      _$ShortPasswordCopyWithImpl<T, $Res>;
+  factory $InvalidPasswordCopyWith(
+          InvalidPassword<T> value, $Res Function(InvalidPassword<T>) then) =
+      _$InvalidPasswordCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
-class _$ShortPasswordCopyWithImpl<T, $Res>
+class _$InvalidPasswordCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ShortPasswordCopyWith<T, $Res> {
-  _$ShortPasswordCopyWithImpl(
-      ShortPassword<T> _value, $Res Function(ShortPassword<T>) _then)
-      : super(_value, (v) => _then(v as ShortPassword<T>));
+    implements $InvalidPasswordCopyWith<T, $Res> {
+  _$InvalidPasswordCopyWithImpl(
+      InvalidPassword<T> _value, $Res Function(InvalidPassword<T>) _then)
+      : super(_value, (v) => _then(v as InvalidPassword<T>));
 
   @override
-  ShortPassword<T> get _value => super._value as ShortPassword<T>;
+  InvalidPassword<T> get _value => super._value as InvalidPassword<T>;
 
   @override
   $Res call({
     Object failedValue = freezed,
   }) {
-    return _then(ShortPassword<T>(
+    return _then(InvalidPassword<T>(
       failedValue:
           failedValue == freezed ? _value.failedValue : failedValue as T,
     ));
   }
 }
 
-class _$ShortPassword<T>
+class _$InvalidPassword<T>
     with DiagnosticableTreeMixin
-    implements ShortPassword<T> {
-  const _$ShortPassword({@required this.failedValue})
+    implements InvalidPassword<T> {
+  const _$InvalidPassword({@required this.failedValue})
       : assert(failedValue != null);
 
   @override
@@ -1204,21 +821,21 @@ class _$ShortPassword<T>
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ValueFailure<$T>.shortPassword(failedValue: $failedValue)';
+    return 'ValueFailure<$T>.invalidPassword(failedValue: $failedValue)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.shortPassword'))
+      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.invalidPassword'))
       ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ShortPassword<T> &&
+        (other is InvalidPassword<T> &&
             (identical(other.failedValue, failedValue) ||
                 const DeepCollectionEquality()
                     .equals(other.failedValue, failedValue)));
@@ -1229,8 +846,8 @@ class _$ShortPassword<T>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
   @override
-  $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith =>
-      _$ShortPasswordCopyWithImpl<T, ShortPassword<T>>(this, _$identity);
+  $InvalidPasswordCopyWith<T, InvalidPassword<T>> get copyWith =>
+      _$InvalidPasswordCopyWithImpl<T, InvalidPassword<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1238,21 +855,19 @@ class _$ShortPassword<T>
     @required Result exceedingLength(T failedValue, int max),
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
+    @required Result invalidPassword(T failedValue),
+    @required Result invalidPhoneNumber(T failedValue),
+    @required Result phoneNumberNotStartsWith3(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
-    return shortPassword(failedValue);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
+    return invalidPassword(failedValue);
   }
 
   @override
@@ -1261,16 +876,15 @@ class _$ShortPassword<T>
     Result exceedingLength(T failedValue, int max),
     Result empty(T failedValue),
     Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
+    Result invalidPassword(T failedValue),
+    Result invalidPhoneNumber(T failedValue),
+    Result phoneNumberNotStartsWith3(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (shortPassword != null) {
-      return shortPassword(failedValue);
+    if (invalidPassword != null) {
+      return invalidPassword(failedValue);
     }
     return orElse();
   }
@@ -1281,21 +895,20 @@ class _$ShortPassword<T>
     @required Result exceedingLength(ExceedingLength<T> value),
     @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    @required Result invalidPassword(InvalidPassword<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required
+        Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
-    return shortPassword(this);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
+    return invalidPassword(this);
   }
 
   @override
@@ -1304,64 +917,64 @@ class _$ShortPassword<T>
     Result exceedingLength(ExceedingLength<T> value),
     Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    Result invalidPassword(InvalidPassword<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (shortPassword != null) {
-      return shortPassword(this);
+    if (invalidPassword != null) {
+      return invalidPassword(this);
     }
     return orElse();
   }
 }
 
-abstract class ShortPassword<T> implements ValueFailure<T> {
-  const factory ShortPassword({@required T failedValue}) = _$ShortPassword<T>;
+abstract class InvalidPassword<T> implements ValueFailure<T> {
+  const factory InvalidPassword({@required T failedValue}) =
+      _$InvalidPassword<T>;
 
   @override
   T get failedValue;
   @override
-  $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith;
+  $InvalidPasswordCopyWith<T, InvalidPassword<T>> get copyWith;
 }
 
-abstract class $InvalidPhotoUrlCopyWith<T, $Res>
+abstract class $InvalidPhoneNumberCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $InvalidPhotoUrlCopyWith(
-          InvalidPhotoUrl<T> value, $Res Function(InvalidPhotoUrl<T>) then) =
-      _$InvalidPhotoUrlCopyWithImpl<T, $Res>;
+  factory $InvalidPhoneNumberCopyWith(InvalidPhoneNumber<T> value,
+          $Res Function(InvalidPhoneNumber<T>) then) =
+      _$InvalidPhoneNumberCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
-class _$InvalidPhotoUrlCopyWithImpl<T, $Res>
+class _$InvalidPhoneNumberCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $InvalidPhotoUrlCopyWith<T, $Res> {
-  _$InvalidPhotoUrlCopyWithImpl(
-      InvalidPhotoUrl<T> _value, $Res Function(InvalidPhotoUrl<T>) _then)
-      : super(_value, (v) => _then(v as InvalidPhotoUrl<T>));
+    implements $InvalidPhoneNumberCopyWith<T, $Res> {
+  _$InvalidPhoneNumberCopyWithImpl(
+      InvalidPhoneNumber<T> _value, $Res Function(InvalidPhoneNumber<T>) _then)
+      : super(_value, (v) => _then(v as InvalidPhoneNumber<T>));
 
   @override
-  InvalidPhotoUrl<T> get _value => super._value as InvalidPhotoUrl<T>;
+  InvalidPhoneNumber<T> get _value => super._value as InvalidPhoneNumber<T>;
 
   @override
   $Res call({
     Object failedValue = freezed,
   }) {
-    return _then(InvalidPhotoUrl<T>(
+    return _then(InvalidPhoneNumber<T>(
       failedValue:
           failedValue == freezed ? _value.failedValue : failedValue as T,
     ));
   }
 }
 
-class _$InvalidPhotoUrl<T>
+class _$InvalidPhoneNumber<T>
     with DiagnosticableTreeMixin
-    implements InvalidPhotoUrl<T> {
-  const _$InvalidPhotoUrl({@required this.failedValue})
+    implements InvalidPhoneNumber<T> {
+  const _$InvalidPhoneNumber({@required this.failedValue})
       : assert(failedValue != null);
 
   @override
@@ -1369,21 +982,21 @@ class _$InvalidPhotoUrl<T>
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ValueFailure<$T>.invalidPhotoUrl(failedValue: $failedValue)';
+    return 'ValueFailure<$T>.invalidPhoneNumber(failedValue: $failedValue)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.invalidPhotoUrl'))
+      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.invalidPhoneNumber'))
       ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidPhotoUrl<T> &&
+        (other is InvalidPhoneNumber<T> &&
             (identical(other.failedValue, failedValue) ||
                 const DeepCollectionEquality()
                     .equals(other.failedValue, failedValue)));
@@ -1394,8 +1007,9 @@ class _$InvalidPhotoUrl<T>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
   @override
-  $InvalidPhotoUrlCopyWith<T, InvalidPhotoUrl<T>> get copyWith =>
-      _$InvalidPhotoUrlCopyWithImpl<T, InvalidPhotoUrl<T>>(this, _$identity);
+  $InvalidPhoneNumberCopyWith<T, InvalidPhoneNumber<T>> get copyWith =>
+      _$InvalidPhoneNumberCopyWithImpl<T, InvalidPhoneNumber<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1403,21 +1017,19 @@ class _$InvalidPhotoUrl<T>
     @required Result exceedingLength(T failedValue, int max),
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
-    @required Result numberTooLarge(T failedValue, num max),
-    @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result invalidPhotoUrl(T failedValue),
+    @required Result invalidPassword(T failedValue),
+    @required Result invalidPhoneNumber(T failedValue),
+    @required Result phoneNumberNotStartsWith3(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
-    return invalidPhotoUrl(failedValue);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
+    return invalidPhoneNumber(failedValue);
   }
 
   @override
@@ -1426,16 +1038,15 @@ class _$InvalidPhotoUrl<T>
     Result exceedingLength(T failedValue, int max),
     Result empty(T failedValue),
     Result multiline(T failedValue),
-    Result numberTooLarge(T failedValue, num max),
-    Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result invalidPhotoUrl(T failedValue),
+    Result invalidPassword(T failedValue),
+    Result invalidPhoneNumber(T failedValue),
+    Result phoneNumberNotStartsWith3(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (invalidPhotoUrl != null) {
-      return invalidPhotoUrl(failedValue);
+    if (invalidPhoneNumber != null) {
+      return invalidPhoneNumber(failedValue);
     }
     return orElse();
   }
@@ -1446,21 +1057,20 @@ class _$InvalidPhotoUrl<T>
     @required Result exceedingLength(ExceedingLength<T> value),
     @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
-    @required Result numberTooLarge(NumberTooLarge<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    @required Result invalidPassword(InvalidPassword<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required
+        Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
     assert(multiline != null);
-    assert(numberTooLarge != null);
-    assert(listTooLong != null);
     assert(invalidEmail != null);
-    assert(shortPassword != null);
-    assert(invalidPhotoUrl != null);
-    return invalidPhotoUrl(this);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
+    return invalidPhoneNumber(this);
   }
 
   @override
@@ -1469,27 +1079,191 @@ class _$InvalidPhotoUrl<T>
     Result exceedingLength(ExceedingLength<T> value),
     Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
-    Result numberTooLarge(NumberTooLarge<T> value),
-    Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result invalidPhotoUrl(InvalidPhotoUrl<T> value),
+    Result invalidPassword(InvalidPassword<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (invalidPhotoUrl != null) {
-      return invalidPhotoUrl(this);
+    if (invalidPhoneNumber != null) {
+      return invalidPhoneNumber(this);
     }
     return orElse();
   }
 }
 
-abstract class InvalidPhotoUrl<T> implements ValueFailure<T> {
-  const factory InvalidPhotoUrl({@required T failedValue}) =
-      _$InvalidPhotoUrl<T>;
+abstract class InvalidPhoneNumber<T> implements ValueFailure<T> {
+  const factory InvalidPhoneNumber({@required T failedValue}) =
+      _$InvalidPhoneNumber<T>;
 
   @override
   T get failedValue;
   @override
-  $InvalidPhotoUrlCopyWith<T, InvalidPhotoUrl<T>> get copyWith;
+  $InvalidPhoneNumberCopyWith<T, InvalidPhoneNumber<T>> get copyWith;
+}
+
+abstract class $PhoneNumberNotStartsWith3CopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $PhoneNumberNotStartsWith3CopyWith(PhoneNumberNotStartsWith3<T> value,
+          $Res Function(PhoneNumberNotStartsWith3<T>) then) =
+      _$PhoneNumberNotStartsWith3CopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+class _$PhoneNumberNotStartsWith3CopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $PhoneNumberNotStartsWith3CopyWith<T, $Res> {
+  _$PhoneNumberNotStartsWith3CopyWithImpl(PhoneNumberNotStartsWith3<T> _value,
+      $Res Function(PhoneNumberNotStartsWith3<T>) _then)
+      : super(_value, (v) => _then(v as PhoneNumberNotStartsWith3<T>));
+
+  @override
+  PhoneNumberNotStartsWith3<T> get _value =>
+      super._value as PhoneNumberNotStartsWith3<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(PhoneNumberNotStartsWith3<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+class _$PhoneNumberNotStartsWith3<T>
+    with DiagnosticableTreeMixin
+    implements PhoneNumberNotStartsWith3<T> {
+  const _$PhoneNumberNotStartsWith3({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ValueFailure<$T>.phoneNumberNotStartsWith3(failedValue: $failedValue)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'ValueFailure<$T>.phoneNumberNotStartsWith3'))
+      ..add(DiagnosticsProperty('failedValue', failedValue));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is PhoneNumberNotStartsWith3<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @override
+  $PhoneNumberNotStartsWith3CopyWith<T, PhoneNumberNotStartsWith3<T>>
+      get copyWith => _$PhoneNumberNotStartsWith3CopyWithImpl<T,
+          PhoneNumberNotStartsWith3<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result exceedingLength(T failedValue, int max),
+    @required Result empty(T failedValue),
+    @required Result multiline(T failedValue),
+    @required Result invalidEmail(T failedValue),
+    @required Result invalidPassword(T failedValue),
+    @required Result invalidPhoneNumber(T failedValue),
+    @required Result phoneNumberNotStartsWith3(T failedValue),
+  }) {
+    assert(exceedingLength != null);
+    assert(empty != null);
+    assert(multiline != null);
+    assert(invalidEmail != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
+    return phoneNumberNotStartsWith3(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result exceedingLength(T failedValue, int max),
+    Result empty(T failedValue),
+    Result multiline(T failedValue),
+    Result invalidEmail(T failedValue),
+    Result invalidPassword(T failedValue),
+    Result invalidPhoneNumber(T failedValue),
+    Result phoneNumberNotStartsWith3(T failedValue),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (phoneNumberNotStartsWith3 != null) {
+      return phoneNumberNotStartsWith3(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result exceedingLength(ExceedingLength<T> value),
+    @required Result empty(Empty<T> value),
+    @required Result multiline(Multiline<T> value),
+    @required Result invalidEmail(InvalidEmail<T> value),
+    @required Result invalidPassword(InvalidPassword<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required
+        Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
+  }) {
+    assert(exceedingLength != null);
+    assert(empty != null);
+    assert(multiline != null);
+    assert(invalidEmail != null);
+    assert(invalidPassword != null);
+    assert(invalidPhoneNumber != null);
+    assert(phoneNumberNotStartsWith3 != null);
+    return phoneNumberNotStartsWith3(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result exceedingLength(ExceedingLength<T> value),
+    Result empty(Empty<T> value),
+    Result multiline(Multiline<T> value),
+    Result invalidEmail(InvalidEmail<T> value),
+    Result invalidPassword(InvalidPassword<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    Result phoneNumberNotStartsWith3(PhoneNumberNotStartsWith3<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (phoneNumberNotStartsWith3 != null) {
+      return phoneNumberNotStartsWith3(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PhoneNumberNotStartsWith3<T> implements ValueFailure<T> {
+  const factory PhoneNumberNotStartsWith3({@required T failedValue}) =
+      _$PhoneNumberNotStartsWith3<T>;
+
+  @override
+  T get failedValue;
+  @override
+  $PhoneNumberNotStartsWith3CopyWith<T, PhoneNumberNotStartsWith3<T>>
+      get copyWith;
 }

@@ -2,7 +2,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:dartz/dartz.dart';
 import 'package:ualet_ddd/domain/core/error.dart';
 import 'package:ualet_ddd/domain/core/value_validators.dart';
-import 'package:uuid/uuid.dart';
 import 'common_interfaces.dart';
 import 'failures.dart';
 
@@ -60,38 +59,16 @@ class StringSingleLine extends ValueObject<String> {
   const StringSingleLine._(this.value);
 }
 
-class UniqueId extends ValueObject<String> {
+class PhoneNumber extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  // We cannot let a simple String be passed in. This would allow for possible non-unique IDs.
-  factory UniqueId() {
-    return UniqueId._(
-      right(Uuid().v1()),
+  factory PhoneNumber(String input) {
+    assert(input != null);
+    return PhoneNumber._(
+      validatePhoneNumber(input),
     );
   }
 
-  /// Used with strings we trust are unique, such as database IDs.
-  factory UniqueId.fromUniqueString(String uniqueIdStr) {
-    assert(uniqueIdStr != null);
-    return UniqueId._(
-      right(uniqueIdStr),
-    );
-  }
-
-  const UniqueId._(this.value);
-}
-
-class NumberId extends ValueObject<int> {
-  @override
-  final Either<ValueFailure<int>, int> value;
-
-  factory NumberId(int input) {
-    assert(input != null && input != 0);
-    return NumberId._(
-      right(input),
-    );
-  }
-
-  const NumberId._(this.value);
+  const PhoneNumber._(this.value);
 }

@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:ualet_ddd/domain/core/failures.dart';
-import 'package:kt_dart/collection.dart';
 
 Either<ValueFailure<String>, String> validateMaxStringLength(
   String input,
@@ -32,22 +31,36 @@ Either<ValueFailure<String>, String> validateSingleLine(String input) {
   }
 }
 
-Either<ValueFailure<KtList<T>>, KtList<T>> validateMaxListLength<T>(
-    KtList<T> input, int maxLength) {
-  if (input.size <= maxLength) {
-    return right(input);
+Either<ValueFailure<String>, String> validatePhoneNumber(String input) {
+  const phoneNumberRegex = r'^\d\d\d\d\d\d\d\d\d\d$';
+
+  if (RegExp(phoneNumberRegex).hasMatch(input)) {
+    if (input[0] == '3')
+      return right(input);
+    else
+      return left(ValueFailure.phoneNumberNotStartsWith3(failedValue: input));
   } else {
-    return left(ValueFailure.listTooLong(
-      failedValue: input,
-      max: maxLength,
-    ));
+    return left(ValueFailure.invalidPhoneNumber(failedValue: input));
+  }
+}
+
+Either<ValueFailure<String>, String> validateCredential(String input) {
+  const numberRegex = r'^[0-9]+$';
+  if (RegExp(numberRegex).hasMatch(input)) {
+    return validatePhoneNumber(input);
+  } else {
+    return validateEmailAddress(input);
   }
 }
 
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
-  // Maybe not the most robust way of email validation but it's good enough
-  const emailRegex =
-      r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";
+  const emailRegex = "[a-zA-Z0-9\+\.\_\%\-\+]{1,256}" +
+      "\\@" +
+      "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+      "(" +
+      "\\." +
+      "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+      ")+";
   if (RegExp(emailRegex).hasMatch(input)) {
     return right(input);
   } else {
@@ -56,10 +69,12 @@ Either<ValueFailure<String>, String> validateEmailAddress(String input) {
 }
 
 Either<ValueFailure<String>, String> validatePassword(String input) {
-  // You can also add some advanced password checks (uppercase/lowercase, at least 1 number, ...)
-  if (input.length >= 6) {
+  const passwordRegex =
+      r"^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$";
+
+  if (RegExp(passwordRegex).hasMatch(input)) {
     return right(input);
   } else {
-    return left(ValueFailure.shortPassword(failedValue: input));
+    return left(ValueFailure.invalidPassword(failedValue: input));
   }
 }

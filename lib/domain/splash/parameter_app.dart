@@ -16,8 +16,4 @@ abstract class ParameterApp with _$ParameterApp {
 
   factory ParameterApp.fromJson(Map<String, dynamic> json) =>
       _$ParameterAppFromJson(json);
-
-  factory ParameterApp.fromService(Map<String, dynamic> json) {
-    return ParameterApp.fromJson(json['data']);
-  }
 }

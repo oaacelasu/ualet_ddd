@@ -35,11 +35,21 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "alreadyHaveAnAccountButton" : MessageLookupByLibrary.simpleMessage("Iniciar sesíon"),
     "alreadyHaveAnAccountLabel" : MessageLookupByLibrary.simpleMessage("Ya tengo una cuenta "),
+    "errorEmailField" : MessageLookupByLibrary.simpleMessage("Ingresa un correo electrónico válido"),
+    "errorPasswordField" : MessageLookupByLibrary.simpleMessage("Ingresa una contraseña válida"),
+    "errorPhoneField" : MessageLookupByLibrary.simpleMessage("Ingresa un número válido"),
+    "errorPhoneNumberNotStartsWith3" : MessageLookupByLibrary.simpleMessage("El número debe iniciar en 3"),
+    "hintCredentialField" : MessageLookupByLibrary.simpleMessage("Correo electrónico o celular"),
+    "hintPasswordField" : MessageLookupByLibrary.simpleMessage("Contraseña"),
     "indexTutorialItemA" : m0,
     "indexTutorialItemB" : m1,
     "indexTutorialItemC" : m2,
     "indexTutorialItemD" : m3,
     "indexTutorialItemE" : m4,
+    "notExpectedError" : MessageLookupByLibrary.simpleMessage("Ha ocurrido un error, intenta nuevamente."),
+    "notHaveAnAccountButton" : MessageLookupByLibrary.simpleMessage("Régistrarme"),
+    "notHaveAnAccountLabel" : MessageLookupByLibrary.simpleMessage("Aún no tengo una cuenta "),
+    "signInButton" : MessageLookupByLibrary.simpleMessage("Ingresar"),
     "signUpButton" : MessageLookupByLibrary.simpleMessage("Registrarme"),
     "splashPageVersionLabel" : m5
   };

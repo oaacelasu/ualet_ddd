@@ -1,12 +1,15 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:ualet_ddd/domain/index/index_item.dart';
 import 'package:ualet_ddd/generated/l10n.dart';
 import 'package:ualet_ddd/presentation/core/design/app_dimens.dart';
 import 'package:ualet_ddd/presentation/core/design/app_images.dart';
+import 'package:ualet_ddd/presentation/core/widgets/app_icon/app_icon.dart';
 import 'package:ualet_ddd/presentation/core/widgets/buttons/primary_button.dart';
 import 'package:ualet_ddd/presentation/core/widgets/loading_in_progress_overlay/loading_in_progress_overlay.dart';
 import 'package:ualet_ddd/presentation/pages/index/widgets/have_account_button.dart';
 import 'package:ualet_ddd/presentation/pages/index/widgets/index_swiper_widget.dart';
+import 'package:ualet_ddd/presentation/routes/router.gr.dart';
 
 class IndexPage extends StatefulWidget {
   static const titledKey = 'title';
@@ -41,14 +44,12 @@ class _IndexPageState extends State<IndexPage> {
               horizontal: AppDimens.layoutMargin + AppDimens.layoutSpacerM,
               vertical: AppDimens.layoutSpacerL),
           child: Column(children: [
-            const SizedBox(height: AppDimens.layoutSpacerL),
-            Image.asset(AppImages.appIcon,
-                width: AppDimens.emojiSizeL.width,
-                height: AppDimens.emojiSizeL.height),
+            AppIconWidget(),
             IndexSwiperWidget(items: items),
             PrimaryButton(
               text: S.of(context).signUpButton,
-              action: () {},
+              action: () =>
+                  ExtendedNavigator.rootNavigator.pushNamed(Routes.signUpPage),
             ),
             const SizedBox(height: AppDimens.layoutSpacerM),
             HaveAccountButton()

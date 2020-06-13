@@ -12,10 +12,12 @@ abstract class CoreInjectableModule {
   Future<PackageInfo> get packageInfo => PackageInfo.fromPlatform();
 
   @LazySingleton(env: Environment.prod)
-  Dio get dio =>
-      Dio(BaseOptions(baseUrl: 'https://apiualetqa.azurewebsites.net'));
+  Dio get dio => Dio(BaseOptions(
+      baseUrl: 'https://apiualetqa.azurewebsites.net',
+      contentType: 'application/json'));
 
   @LazySingleton(env: Environment.dev)
-  Dio get dioDev =>
-      Dio(BaseOptions(baseUrl: 'https://apiualetqa.azurewebsites.net'));
+  Dio get dioDev => Dio(BaseOptions(
+      baseUrl: 'https://apiualetqa.azurewebsites.net',
+      contentType: 'application/json'));
 }

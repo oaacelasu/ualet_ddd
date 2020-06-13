@@ -53,6 +53,76 @@ class S {
     );
   }
 
+  /// `Ingresar`
+  String get signInButton {
+    return Intl.message(
+      'Ingresar',
+      name: 'signInButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Correo electrónico o celular`
+  String get hintCredentialField {
+    return Intl.message(
+      'Correo electrónico o celular',
+      name: 'hintCredentialField',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contraseña`
+  String get hintPasswordField {
+    return Intl.message(
+      'Contraseña',
+      name: 'hintPasswordField',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ha ocurrido un error, intenta nuevamente.`
+  String get notExpectedError {
+    return Intl.message(
+      'Ha ocurrido un error, intenta nuevamente.',
+      name: 'notExpectedError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ingresa un correo electrónico válido`
+  String get errorEmailField {
+    return Intl.message(
+      'Ingresa un correo electrónico válido',
+      name: 'errorEmailField',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ingresa un número válido`
+  String get errorPhoneField {
+    return Intl.message(
+      'Ingresa un número válido',
+      name: 'errorPhoneField',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ingresa una contraseña válida`
+  String get errorPasswordField {
+    return Intl.message(
+      'Ingresa una contraseña válida',
+      name: 'errorPasswordField',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Ya tengo una cuenta `
   String get alreadyHaveAnAccountLabel {
     return Intl.message(
@@ -68,6 +138,36 @@ class S {
     return Intl.message(
       'Iniciar sesíon',
       name: 'alreadyHaveAnAccountButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Aún no tengo una cuenta `
+  String get notHaveAnAccountLabel {
+    return Intl.message(
+      'Aún no tengo una cuenta ',
+      name: 'notHaveAnAccountLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Régistrarme`
+  String get notHaveAnAccountButton {
+    return Intl.message(
+      'Régistrarme',
+      name: 'notHaveAnAccountButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `El número debe iniciar en 3`
+  String get errorPhoneNumberNotStartsWith3 {
+    return Intl.message(
+      'El número debe iniciar en 3',
+      name: 'errorPhoneNumberNotStartsWith3',
       desc: '',
       args: [],
     );

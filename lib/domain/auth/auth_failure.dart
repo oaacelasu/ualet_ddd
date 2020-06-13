@@ -3,9 +3,6 @@ part 'auth_failure.freezed.dart';
 
 @freezed
 abstract class AuthFailure with _$AuthFailure {
-  const factory AuthFailure.cancelledByUser() = CancelledByUser;
-  const factory AuthFailure.serverError(String message) = ServerError;
-  const factory AuthFailure.emailAlreadyInUse() = EmailAlreadyInUse;
-  const factory AuthFailure.invalidEmailAndPasswordCombination() =
-      InvalidEmailAndPasswordCombination;
+  const factory AuthFailure.fromServer(String message) = FromServer;
+  const factory AuthFailure.unexpectedError() = UnexpectedError;
 }

@@ -15,21 +15,17 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
   const factory ValueFailure.multiline({
     @required T failedValue,
   }) = Multiline<T>;
-  const factory ValueFailure.numberTooLarge({
-    @required T failedValue,
-    @required num max,
-  }) = NumberTooLarge<T>;
-  const factory ValueFailure.listTooLong({
-    @required T failedValue,
-    @required int max,
-  }) = ListTooLong<T>;
+
   const factory ValueFailure.invalidEmail({
     @required T failedValue,
   }) = InvalidEmail<T>;
-  const factory ValueFailure.shortPassword({
+  const factory ValueFailure.invalidPassword({
     @required T failedValue,
-  }) = ShortPassword<T>;
-  const factory ValueFailure.invalidPhotoUrl({
+  }) = InvalidPassword<T>;
+  const factory ValueFailure.invalidPhoneNumber({
     @required T failedValue,
-  }) = InvalidPhotoUrl<T>;
+  }) = InvalidPhoneNumber<T>;
+  const factory ValueFailure.phoneNumberNotStartsWith3({
+    @required T failedValue,
+  }) = PhoneNumberNotStartsWith3<T>;
 }

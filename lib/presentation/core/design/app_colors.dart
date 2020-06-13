@@ -11,9 +11,20 @@ class AppColors {
 
   // System Colors
   static const Color infoColor = Color(0xFF5FAAEC);
+
   static const Color successColor = Color(0xFF41CF69);
+
   static const Color dangerColor = Color(0xFFEA676A);
+
   static const Color warningColor = Color(0xFFF8D355);
+
+  static const Color infoToastAccentColor = Color(0xFF242C6D);
+  static const Color successToastAccentColor = Color(0xFF256D24);
+  static const Color errorToastAccentColor = Color(0xFF6D2424);
+  static const Color infoToastColor = Color(0x805FAAEC);
+  static const Color successToastColor = Color(0x8041CF69);
+  static const Color errorToastColor = Color(0x80EA676A);
+
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color backgroundColor = Color(0xFFFAF9FD);
   static const Color inputColor = Color(0xFFF9F5FE);
